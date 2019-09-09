@@ -111,7 +111,7 @@ export class TypeaheadDirective implements OnInit, OnDestroy {
   // tslint:disable-next-line:no-any
   @Output() typeaheadOnBlur = new EventEmitter<any>();
 
-  /** fired when scrool is in the last position */ 
+  /** fired when scrool is in the last position */
   @Output() typeaheadScroolDownListener = new EventEmitter<any>();
 
   /**

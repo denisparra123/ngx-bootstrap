@@ -75,7 +75,7 @@ export class TypeaheadContainerComponent {
     private positionService: PositioningService,
     private renderer: Renderer2,
     public element: ElementRef
-  ) { 
+  ) {
     this.page = 0;
   }
 
