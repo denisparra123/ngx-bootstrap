@@ -56,6 +56,7 @@ export class TypeaheadContainerComponent {
   animationState: string;
   visibility = 'hidden';
   height = 0;
+  page: number;
 
   get isBs4(): boolean {
     return !isBs3();
@@ -74,7 +75,9 @@ export class TypeaheadContainerComponent {
     private positionService: PositioningService,
     private renderer: Renderer2,
     public element: ElementRef
-  ) { }
+  ) { 
+    this.page = 0;
+  }
 
   get active(): TypeaheadMatch {
     return this._active;
@@ -328,6 +331,10 @@ export class TypeaheadContainerComponent {
           Number(liElement.nativeElement.offsetHeight);
       }
     }
+  }
+
+  onScroll() {
+    this.parent.typeaheadScroolDownListener.emit({page: this.page++});
   }
 
 

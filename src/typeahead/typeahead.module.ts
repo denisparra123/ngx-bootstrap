@@ -7,8 +7,10 @@ import { ComponentLoaderFactory } from 'ngx-bootstrap/component-loader';
 import { PositioningService } from 'ngx-bootstrap/positioning';
 import { TypeaheadConfig } from './typeahead.config';
 
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, InfiniteScrollModule],
   declarations: [TypeaheadContainerComponent, TypeaheadDirective],
   exports: [TypeaheadContainerComponent, TypeaheadDirective],
   entryComponents: [TypeaheadContainerComponent]

@@ -198,5 +198,8 @@
     "webpack-bundle-analyzer": "2.11.3",
     "webpack-cli": "3.3.0",
     "zone.js": "0.9.1"
+  },
+  "dependencies": {
+    "ngx-infinite-scroll": "8.0.0"
   }
 }

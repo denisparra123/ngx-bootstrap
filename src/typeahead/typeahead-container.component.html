@@ -11,7 +11,9 @@
   <ul class="dropdown-menu"
       #ulElement
       [style.overflow-y]="needScrollbar ? 'scroll': 'auto'"
-      [style.height]="needScrollbar ? guiHeight: 'auto'">
+      [style.height]="needScrollbar ? guiHeight: 'auto'"
+      infiniteScroll
+      (scrolled)="onScroll()">
     <ng-template ngFor let-match let-i="index" [ngForOf]="matches">
       <li #liElements *ngIf="match.isHeader()" class="dropdown-header">{{ match }}</li>
       <li #liElements
